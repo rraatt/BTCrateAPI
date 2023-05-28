@@ -8,7 +8,7 @@ Test task for Genesis software engineering school 3.0
   git clone https://github.com/rraatt/BTCrateApi.git
 ```
 
-Create a .env.dev file and add the following variables:
+Create a .env file and add the following variables:
 
  ```bash
   API_KEY = <Your coinmarketcap api key>
