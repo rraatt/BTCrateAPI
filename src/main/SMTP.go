@@ -19,7 +19,8 @@ func sendEmail(to string, rate float64, errChan chan<- error, wg *sync.WaitGroup
 
 	// Connect to the server, authenticate, set the sender and recipient,
 	// and send the email all in one step.
-	msg := []byte("To: " + to + "\r\n" +
+	msg := []byte("From: " + os.Getenv("SMTP_SENDER") + "\r\n" +
+		"To: " + to + "\r\n" +
 		"Subject: BTC to UAH rate!\r\n" +
 		"\r\n" +
 		"At the moment rate is " + fmt.Sprintf("%f", rate) + " UAH for 1 BTC\r\n")
